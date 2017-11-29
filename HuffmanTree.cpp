@@ -28,42 +28,19 @@ void Haffman(int weight[], int n, HaffNode haffTree[]){
         for (int j = 0; j < n + i; ++j) {//好极了：（j = 0; j < n+i; ++j）
             // 从已经初始化的结点中包括非叶子结点找出权值最小和次小的子树
 
-            if (haffTree[j].weight < m1 && haffTree[j].flag == 0){
+            if (haffTree[j].weight < m1 && haffTree[j].parent == -1){
                 m2 = m1 ;
                 x2 = x1 ;
                 m1 = haffTree[j].weight ;
                 x1 = j ;
             }
-            else if (haffTree[j].weight < m2 && haffTree[j].flag == 0){
+            else if (haffTree[j].weight < m2 && haffTree[j].parent == -1){
                 m2 = haffTree[j].weight ;
                 x2 = j ;
             }
-
-//            if (haffTree[j].parent == 0){
-//                x = j ;
-//                break ;
-//            }
-
         }
 
-//        for (int k = 0; k < n - 1; ++k) {
-//            if (haffTree[k].weight < haffTree[x].weight && haffTree[k].parent == 0)
-//                x = k ;//选出最小结点
-//        }
-//
-//        for (int l = 0; l < n - 1; ++l) {
-//            if (haffTree[l].parent == 0 && x != l){
-//                y = l ;
-//                break ;
-//            }
-//        }
-//
-//        for (int i = 0; i < n - 1; ++i) {
-//            if (haffTree[i].weight < haffTree[y].weight && haffTree[i].parent == 0 && x != i)
-//                y = i ;
-//        }
-//
-//       x > y ? (x1 = y, x2 = x) :(x1 = x, x2 = y) ;
+
 
         //*将找出来的两颗权值最小和次小的子树合并为一颗子树
         haffTree[x1].parent = n + i ;
