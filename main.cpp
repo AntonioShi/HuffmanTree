@@ -15,7 +15,7 @@ int main() {
     int i, j, n = 4 ;
     int weight[] = {1, 3, 5, 7};//权重数组
     HaffNode *myHaffTree = (HaffNode *)malloc(sizeof(HaffNode) * (2 * n - 1)) ;//2n-1个哈夫曼树结点
-    Code *myHaffCode = (Code *)malloc(sizeof(Code) * n) ;
+    Code *myHaffCode = (Code *)malloc(sizeof(Code) * n) ;//shuzu
 
     if (n > MaxN){
         printf("给出的n越界， 修改MaxN\n") ;
