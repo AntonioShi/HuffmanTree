@@ -27,12 +27,13 @@ typedef struct {
 }Code;//哈夫曼编码的结构
 
 void Haffman(int weight[], int n, HaffNode haffTree[]) ;
-/*
- *
+/*传入权重数组weight，以及哈夫曼树数组haffTree
+ *建立哈夫曼回树并对哈夫曼树初始化
  */
 void HaffmanCode(HaffNode haffTree[], int n, Code haffCode[]) ;
-/*
- *
+/*哈夫曼编码
+ *传入哈夫曼树，以及编码结构体
+ * 利用创建好的哈夫曼树，进行哈夫曼树的编码操作
  */
 
 #endif //HUFFMANTREE_HUFFMANTREE_H
